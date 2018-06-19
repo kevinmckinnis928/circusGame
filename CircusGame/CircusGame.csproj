@@ -311,6 +311,7 @@
     <Compile Include="Assets\Scripts\buttonManager.cs" />
     <Compile Include="Assets\Scripts\crosshairScript.cs" />
     <Compile Include="Assets\Scripts\menuSpawner.cs" />
+    <Compile Include="Assets\Scripts\menuTop.cs" />
     <Compile Include="Assets\Scripts\pauseMenu.cs" />
     <Compile Include="Assets\Scripts\pauseScript.cs" />
     <Compile Include="Assets\Scripts\popScript.cs" />
