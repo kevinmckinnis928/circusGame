@@ -306,13 +306,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\pauseScript.cs" />
     <Compile Include="Assets\Scripts\balloonBehavior.cs" />
     <Compile Include="Assets\Scripts\BalloonSpawn.cs" />
     <Compile Include="Assets\Scripts\buttonManager.cs" />
     <Compile Include="Assets\Scripts\crosshairScript.cs" />
     <Compile Include="Assets\Scripts\menuSpawner.cs" />
     <Compile Include="Assets\Scripts\pauseMenu.cs" />
+    <Compile Include="Assets\Scripts\pauseScript.cs" />
     <Compile Include="Assets\Scripts\popScript.cs" />
     <Compile Include="Assets\Scripts\topSide.cs" />
     <Compile Include="Assets\Scripts\worldScript.cs" />

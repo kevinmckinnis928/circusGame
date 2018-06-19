@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Balloon
   - AudioS
+  - Pause
   layers:
   - Default
   - TransparentFX
