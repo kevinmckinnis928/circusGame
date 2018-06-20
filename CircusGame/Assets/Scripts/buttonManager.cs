@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class buttonManager : MonoBehaviour {
 
+	public bool gameOver = false;
+
+	public GameObject gameOverPanel;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -12,7 +16,9 @@ public class buttonManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(gameOver){
+			GameOver();
+		}
 	}
 
     public void NewGameButton(string newGameScene)
@@ -23,5 +29,10 @@ public class buttonManager : MonoBehaviour {
     {
         Application.Quit();
     }
-    
+    public void GameOver() {
+    	gameOverPanel.SetActive(true);
+    }
+
+
+
 }

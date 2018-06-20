@@ -97,7 +97,7 @@ public class BalloonSpawn : MonoBehaviour {
                     Instantiate(whiteBalloon, new Vector3(Random.Range(-11f, 6f),
                             this.transform.position.y, this.transform.position.z), Quaternion.identity);
                 }
-                else
+                else if (yellow)
                 {
                     Instantiate(yellowBalloon, new Vector3(Random.Range(-11f, 6f),
                             this.transform.position.y, this.transform.position.z), Quaternion.identity);
