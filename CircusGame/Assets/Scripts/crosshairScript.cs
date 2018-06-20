@@ -5,8 +5,6 @@ using UnityEngine;
 public class crosshairScript : MonoBehaviour {
 
 
-	 //private bool dest = false;
-
 	 public int playerLives = 3;
 
 	// Use this for initialization
@@ -16,13 +14,15 @@ public class crosshairScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-     	Vector3 temp = Input.mousePosition;
-   		temp.z = 10f; // Set this to be the distance you want the object to be placed in front of the camera.
-   		this.transform.position = Camera.main.ScreenToWorldPoint(temp);
+		// if(!GameObject.Find("PauseMenu").GetComponent<pauseMenu>().gamePaused) 
+		// {
+	     	Vector3 temp = Input.mousePosition;
+	   		temp.z = 10f; // Set this to be the distance you want the object to be placed in front of the camera.
+	   		this.transform.position = Camera.main.ScreenToWorldPoint(temp);
+   		// }
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		//dest = true;
 
 	}
 	void OnTriggerStay2D(Collider2D other){
@@ -30,6 +30,6 @@ public class crosshairScript : MonoBehaviour {
 			other.transform.localScale -= new Vector3(.007f,.007f,0);
 	}
 	void OnTriggerExit2D(Collider2D other){
-		//dest = false;
+
 	}
 }

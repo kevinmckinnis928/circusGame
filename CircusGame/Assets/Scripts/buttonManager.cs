@@ -32,7 +32,10 @@ public class buttonManager : MonoBehaviour {
     public void GameOver() {
     	gameOverPanel.SetActive(true);
     }
-
+    public void restart() {
+    	SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    	gameOverPanel.SetActive(false);
+    }
 
 
 }

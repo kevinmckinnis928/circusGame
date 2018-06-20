@@ -21,7 +21,6 @@ public class balloonBehavior : MonoBehaviour {
 
         if (this.transform.localScale.x <= .3f) {
             GameObject.Find("player").GetComponent<worldScript>().playerPoints++;
-            GameObject.Find("player").GetComponent<worldScript>().playerLives--;
             GameObject.Find("balloonSpawn").GetComponent<BalloonSpawn>().balloonsPopped++;
             GameObject.Find("balloonSpawn").GetComponent<BalloonSpawn>().firsttime = true;
             Instantiate(pop, this.transform.position, Quaternion.identity);
