@@ -14,9 +14,8 @@ public class balloonBehavior : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		//pauseMenu pause = GameObject.Find("PauseMenu").GetComponent<pauseMenu>();
 
-		//if(pause.gamePaused == false)
+		if(Time.timeScale == 1.0f)
         	this.transform.Translate(0, .03f, 0);
 
         if (this.transform.localScale.x <= .3f) {

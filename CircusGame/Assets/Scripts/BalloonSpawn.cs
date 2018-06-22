@@ -21,14 +21,19 @@ public class BalloonSpawn : MonoBehaviour {
 
     public bool playmode = true;
     public bool firsttime = false;
+    public bool startOver = false;
 
 	 public int currLevel;
      private int nextLevel;
 	 public int balloonsLeft = 10;
 	 public int balloonsPopped = 0;
 
+
+
 	// Use this for initialization
 	void Start () {
+
+        startOver = GameObject.Find("buttonManager").GetComponent<buttonManager>().restarted;
 
         currLevel = 1;
 
@@ -72,7 +77,7 @@ public class BalloonSpawn : MonoBehaviour {
         }
 
 
-        if (playmode)
+        if (Time.timeScale == 1.0f)
         {
             if (Time.time > nextActionTime)
             {

@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+
 public class buttonManager : MonoBehaviour {
 
 	public bool gameOver = false;
+    public bool restarted = false;
 
-	public GameObject gameOverPanel;
+    public GameObject gameOverPanel;
 
 	// Use this for initialization
 	void Start () {
@@ -31,9 +34,11 @@ public class buttonManager : MonoBehaviour {
     }
     public void GameOver() {
     	gameOverPanel.SetActive(true);
+        Time.timeScale = 0.0f;
     }
     public void restart() {
-    	SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        restarted = true;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     	gameOverPanel.SetActive(false);
     }
 
