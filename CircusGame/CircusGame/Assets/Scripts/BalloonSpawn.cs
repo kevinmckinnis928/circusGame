@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class BalloonSpawn : MonoBehaviour {
 
@@ -28,7 +27,6 @@ public class BalloonSpawn : MonoBehaviour {
 	 public int balloonsLeft = 10;
 	 public int balloonsPopped = 0;
 
-    public Text levelText;
 
 	// Use this for initialization
 	void Start () {
