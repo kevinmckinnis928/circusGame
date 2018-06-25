@@ -917,8 +917,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 437616879}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.168, y: 0.991, z: 0.28515625}
-  m_LocalScale: {x: 1.9473082, y: 1.0468713, z: 2.5002992}
+  m_LocalPosition: {x: 6.219, y: 1.11, z: 0.28515625}
+  m_LocalScale: {x: 1.821895, y: 1.0686827, z: 2.5002992}
   m_Children: []
   m_Father: {fileID: 56468371}
   m_RootOrder: 10
@@ -1282,7 +1282,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 8.0661125
+  orthographic size: 5.8531404
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1305,7 +1305,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 6.12, z: -10}
+  m_LocalPosition: {x: 0, y: 6.28, z: -10}
   m_LocalScale: {x: 0.06598903, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1511758257}
@@ -2073,6 +2073,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOver: 0
+  restarted: 0
   gameOverPanel: {fileID: 1801981804}
 --- !u!1 &1113875753
 GameObject:
@@ -3116,6 +3117,7 @@ MonoBehaviour:
     type: 2}
   playmode: 1
   firsttime: 0
+  startOver: 0
   currLevel: 0
   balloonsLeft: 10
   balloonsPopped: 0
