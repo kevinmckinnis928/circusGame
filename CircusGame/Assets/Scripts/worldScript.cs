@@ -4,19 +4,32 @@ using UnityEngine;
 
 public class worldScript : MonoBehaviour {
 
-	public int playerLives = 3;
-	public int playerPoints = 0;
+    public int playerLives = 3;
+    public int playerPoints = 0;
 
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    // Use this for initialization
+    void Start() {
 
-	// Update is called once per frame
-	void Update () {
-		if(playerLives <= 0) 
-			GameObject.Find("ButtonManager").GetComponent<buttonManager>().gameOver = true;
-	}
-	
+    }
+
+    // Update is called once per frame
+    void Update() {
+        if (playerLives <= 0)
+            GameObject.Find("ButtonManager").GetComponent<buttonManager>().gameOver = true;
+
+        bool over = GameObject.Find("ButtonManager").GetComponent<buttonManager>().gameOver;
+        //bool paused = GameObject.Find("PauseMenu").GetComponent<pauseMenu>().gamePaused;
+
+        if (over == false)
+        {
+            Cursor.visible = false;
+        } else
+        {
+            Cursor.visible = true;
+        }
+    }
+
+    
+       
 }

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Tobii.Gaming;
 
 public class crosshairScript : MonoBehaviour {
 
@@ -9,18 +10,22 @@ public class crosshairScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		 Cursor.visible = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		// if(!GameObject.Find("PauseMenu").GetComponent<pauseMenu>().gamePaused) 
-		// {
-	     	//Vector3 temp = Input.mousePosition;
-	   		//temp.z = 10f; // Set this to be the distance you want the object to be placed in front of the camera.
-	   		//this.transform.position = Camera.main.ScreenToWorldPoint(temp);
-   		// }
-	}
+
+        Vector3 screenPoint = TobiiAPI.GetGazePoint().Screen;
+        screenPoint.z = 1f;
+        this.transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
+
+        // if(!GameObject.Find("PauseMenu").GetComponent<pauseMenu>().gamePaused) 
+        // {
+        //Vector3 temp = Input.mousePosition;
+        //temp.z = 10f; // Set this to be the distance you want the object to be placed in front of the camera.
+        //this.transform.position = Camera.main.ScreenToWorldPoint(temp);
+        // }
+    }
 
 	void OnTriggerEnter2D(Collider2D other){
 
