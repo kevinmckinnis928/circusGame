@@ -2965,6 +2965,7 @@ GameObject:
   - component: {fileID: 1626626465}
   - component: {fileID: 1626626464}
   - component: {fileID: 1626626468}
+  - component: {fileID: 1626626469}
   m_Layer: 0
   m_Name: cursor
   m_TagString: Player
@@ -3033,7 +3034,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 4
   m_Sprite: {fileID: 21300000, guid: 774def6810f1e8b478410a1ac7897680, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3077,6 +3078,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1626626469
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1626626463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96aa7272f145e674b8b3947eb3f987b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PointCloudSize: 10
+  PointSprite: {fileID: 21300000, guid: 774def6810f1e8b478410a1ac7897680, type: 3}
+  PointScale: 0.75
+  VisualizationDistance: 0.5
+  FilterSmoothingFactor: 0.85
 --- !u!1 &1637883733
 GameObject:
   m_ObjectHideFlags: 0
@@ -3117,7 +3134,6 @@ MonoBehaviour:
     type: 2}
   playmode: 1
   firsttime: 0
-  startOver: 0
   currLevel: 0
   balloonsLeft: 10
   balloonsPopped: 0
