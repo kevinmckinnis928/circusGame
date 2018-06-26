@@ -28,19 +28,18 @@ public class pauseMenu : MonoBehaviour {
     }
         public void Resume ()
         {
+            Cursor.visible = false;
             pauseMenuUI.SetActive(false);
             Time.timeScale = 1.0f;
             gamePaused = false;
-            Cursor.visible = false;
         }
         public void Pause ()
         {
+            Cursor.visible = true;
             Debug.Log("Paused");
             pauseMenuUI.SetActive(true);
             Time.timeScale = 0.0f;
             gamePaused = true;
-            Cursor.visible = true;
-
         }
 
 	

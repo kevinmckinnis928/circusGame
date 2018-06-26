@@ -33,11 +33,13 @@ public class buttonManager : MonoBehaviour {
         Application.Quit();
     }
     public void GameOver() {
+        Cursor.visible = true;
     	gameOverPanel.SetActive(true);
         Time.timeScale = 0.0f;
     }
     public void restart() {
         restarted = true;
+        Cursor.visible = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     	gameOverPanel.SetActive(false);
     }
