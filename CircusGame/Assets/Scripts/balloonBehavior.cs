@@ -18,6 +18,11 @@ public class balloonBehavior : MonoBehaviour {
 		if(Time.timeScale == 1.0f)
         	this.transform.Translate(0, .03f, 0);
 
+        if(GameObject.Find("buttonManager").GetComponent<buttonManager>().gameOver == true)
+        {
+            Destroy(this.gameObject);
+        }
+
         if (this.transform.localScale.x <= .3f) {
             GameObject.Find("player").GetComponent<worldScript>().playerPoints++;
             GameObject.Find("balloonSpawn").GetComponent<BalloonSpawn>().balloonsPopped++;
@@ -25,5 +30,7 @@ public class balloonBehavior : MonoBehaviour {
             Instantiate(pop, this.transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
+
+        
     }
 }
