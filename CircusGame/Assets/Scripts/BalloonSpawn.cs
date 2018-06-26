@@ -22,7 +22,7 @@ public class BalloonSpawn : MonoBehaviour {
     public bool playmode = true;
     public bool firsttime = false;
 
-	 public int currLevel;
+	 public int currLevel = 1;
      private int nextLevel;
 	 public int balloonsLeft = 10;
 	 public int balloonsPopped = 0;
@@ -70,7 +70,7 @@ public class BalloonSpawn : MonoBehaviour {
             currLevel++;
             Debug.Log("Level " + currLevel);
             balloonsPopped = 0;
-            period -= .1f;
+            period -= .5f;
             firsttime = false;
         }
 
