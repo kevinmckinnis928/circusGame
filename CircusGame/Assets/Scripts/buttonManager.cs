@@ -11,9 +11,10 @@ public class buttonManager : MonoBehaviour {
     public bool restarted = false;
 
     public GameObject gameOverPanel;
+    public GameObject scorePanel;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -33,13 +34,14 @@ public class buttonManager : MonoBehaviour {
         Application.Quit();
     }
     public void GameOver() {
-        Cursor.visible = true;
+        //Cursor.visible = true;
+        scorePanel.SetActive(false);
     	gameOverPanel.SetActive(true);
         Time.timeScale = 0.0f;
     }
     public void restart() {
         restarted = true;
-        Cursor.visible = false;
+        //Cursor.visible = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     	gameOverPanel.SetActive(false);
     }

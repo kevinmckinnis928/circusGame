@@ -74,6 +74,8 @@ public class BalloonSpawn : MonoBehaviour {
             firsttime = false;
         }
 
+        if (period <= 1.5f)
+            period = 1.5f;
 
         if (Time.timeScale == 1.0f)
         {
