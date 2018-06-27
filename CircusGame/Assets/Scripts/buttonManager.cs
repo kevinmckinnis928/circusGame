@@ -31,7 +31,11 @@ public class buttonManager : MonoBehaviour {
     }
     public void QuitGame()
     {
-        Application.Quit();
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit ();
+#endif
     }
     public void GameOver() {
         Time.timeScale = 0.0f;
