@@ -28,14 +28,17 @@ public class levelScript : MonoBehaviour {
             levelMenuUI.SetActive(true);
         }
 
-        if (Time.time > nextActionTime)
+        if (levelMenuUI.activeSelf == true)
         {
-            nextActionTime += period;
-            if (levelMenuUI.activeSelf == true)
-            {
-                levelMenuUI.SetActive(false);
-            }
+            Invoke("LevelOff", 2f);
         }
 
     }
+
+    void LevelOff()
+    {
+            levelMenuUI.SetActive(false);
+    }
+
+
 }

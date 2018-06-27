@@ -18,10 +18,7 @@ public class balloonBehavior : MonoBehaviour {
 		if(Time.timeScale == 1.0f)
         	this.transform.Translate(0, .03f, 0);
 
-        if(GameObject.Find("buttonManager").GetComponent<buttonManager>().gameOver == true)
-        {
-            Destroy(this.gameObject);
-        }
+        
 
         if (this.transform.localScale.x <= .3f) {
             GameObject.Find("player").GetComponent<worldScript>().playerPoints++;
@@ -31,6 +28,10 @@ public class balloonBehavior : MonoBehaviour {
             Destroy(gameObject);
         }
 
-        
+        if (GameObject.Find("buttonManager").GetComponent<buttonManager>().gameOver == true)
+        {
+            Destroy(this.gameObject);
+        }
+
     }
 }
