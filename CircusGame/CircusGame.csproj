@@ -312,6 +312,7 @@
     <Compile Include="Assets\Scripts\crosshairScript.cs" />
     <Compile Include="Assets\Scripts\levelScript.cs" />
     <Compile Include="Assets\Scripts\lookScript.cs" />
+    <Compile Include="Assets\Scripts\menuCursor.cs" />
     <Compile Include="Assets\Scripts\menuSpawner.cs" />
     <Compile Include="Assets\Scripts\menuTop.cs" />
     <Compile Include="Assets\Scripts\pauseMenu.cs" />
